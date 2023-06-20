@@ -5,9 +5,9 @@ from main.UserStorage import UserStorage
 
 class TestUserStorage(unittest.TestCase):
 
-    u1 = User(1, "Max")
-    u2 = User(2, "Diana")
-    u3 = User(3, "Alex")
+    u1 = User("Max")
+    u2 = User("Diana")
+    u3 = User("Alex")
     users = UserStorage()
     users.addUser(u1)
     users.addUser(u2)
@@ -19,4 +19,7 @@ class TestUserStorage(unittest.TestCase):
     def testNameOfSecondUser(self):
         foundUser = self.users.getUserByID(2)
         self.assertEqual(foundUser.name, "Diana", "Name should be Diana")
+
+    def testIdGenerating(self):
+        self.assertEqual(self.u3.userID, 3, "User ID should be 3")
 

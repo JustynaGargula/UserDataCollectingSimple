@@ -1,8 +1,8 @@
 
 class User:
 
-    def __init__(self, userID, name):
-        self.userID = userID
+    def __init__(self, name):
+        self.userID = 0
         self.name = name
 
     def changeName(self, newName):
@@ -10,3 +10,6 @@ class User:
 
     def displayUserInfo(self):
         return self.userID+self.name
+
+    def assignID(self, userID):
+        self.userID = userID

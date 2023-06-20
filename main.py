@@ -1,11 +1,24 @@
+import main.User as u
+import main.UserStorage as uS
+
+
+class Main:
+    def __init__(self):
+        self.users = uS.UserStorage()
+
+    def createFirstUser(self, name):
+        me = u.User(name)
+        self.users.addUser(me)
+
 
 def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+    print('Hi ' + name + '!')
 
 
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    Main().createFirstUser('Justyna')
+    print_hi('Justyna')
+
+
 
 
