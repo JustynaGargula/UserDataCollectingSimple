@@ -9,7 +9,7 @@ class User:
         self.name = newName
 
     def displayUserInfo(self):
-        return self.userID+self.name
+        return str(self.userID)+" "+self.name
 
     def assignID(self, userID):
         self.userID = userID

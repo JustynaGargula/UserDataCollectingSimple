@@ -6,9 +6,10 @@ class Main:
     def __init__(self):
         self.users = uS.UserStorage()
 
-    def createFirstUser(self, name):
+    def createUser(self, name):
         me = u.User(name)
         self.users.addUser(me)
+        print("Information about user: ", me.displayUserInfo())
 
 
 def print_hi(name):
@@ -16,9 +17,8 @@ def print_hi(name):
 
 
 if __name__ == '__main__':
-    Main().createFirstUser('Justyna')
+    m = Main()
+    m.createUser('Justyna')
     print_hi('Justyna')
-
-
 
 
